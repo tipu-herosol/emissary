@@ -1,6 +1,6 @@
 import React from "react";
 
-function DisclaimerBlk() {
+function Disclaimer() {
 	return (
 		<>
 			<section id="terms">
@@ -61,4 +61,4 @@ function DisclaimerBlk() {
 	);
 }
 
-export default DisclaimerBlk;
+export default Disclaimer;

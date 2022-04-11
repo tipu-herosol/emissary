@@ -1,18 +1,16 @@
 import React from "react";
-import ChooseBlk from "../../common/ChooseBlk";
+import ChooseBlk from "./ChooseBlk";
 
 function Choose({ data }) {
 	return (
 		<>
-			<section id="choose">
+			<section id="choose" style={{ backgroundImage: "url(" + data.sec_bg + ")" }}>
 				<div className="contain text-center">
 					<div className="content">
-						<h1>
-							{data.heading}
-							<strong>{data.heading_ex}</strong>
-						</h1>
+						<h1>{data.heading}</h1>
+						<p className="size_4">{data.para}</p>
 					</div>
-					<div className="flex_row">
+					<div className="flex_row main_row">
 						{data.block.map((val) => {
 							return (
 								<div className="col" key={val.id}>

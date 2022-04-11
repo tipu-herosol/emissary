@@ -14,9 +14,28 @@ body {
 	overflow: initial;
 }
 
+#cover {
+	&:before {
+		@include overlay(linear-gradient(-45deg, #1de8b0 0%, #201e98 100%), 0.9);
+	}
+}
+
 #oops {
-	background: $black;
-	color: $light;
+	background: $light;
+	background-size: 0;
+	&:before {
+		content: "";
+		@include pos;
+		background-image: inherit;
+		@include bg(100% 100%);
+	}
+	.contain {
+		position: relative;
+		z-index: 3;
+	}
+	.icon {
+		font-size: 16rem;
+	}
 }
 
 /*
@@ -28,9 +47,11 @@ body {
 header {
 	@include pos($pos: fixed, $b: initial, $z: 30);
 	height: 8rem;
-	// background: $black;
-	// -webkit-box-shadow: $shadow;
-	// box-shadow: $shadow;
+	&.fix {
+		background: $black;
+		-webkit-box-shadow: $shadow;
+		box-shadow: $shadow;
+	}
 	@include trans;
 	.toggle {
 		@include ipad_sm {
@@ -84,10 +105,10 @@ header {
 		height: 8rem;
 	}
 	footer & {
-		max-width: 10rem;
+		max-width: 8rem;
 		height: auto;
 		// margin-left: auto;
-		margin: 0 auto 2rem;
+		margin: 0 0 2rem;
 	}
 	#oops & {
 		max-width: 8rem;
@@ -277,7 +298,7 @@ footer {
 	position: relative;
 	background: $black;
 	color: $light;
-	padding: 6rem 0 4rem;
+	padding: 8rem 0 4rem;
 	margin-top: auto;
 	overflow: hidden;
 	.contain {
@@ -290,65 +311,31 @@ footer {
 		}
 	}
 	.main_row {
-		> .col {
-			-webkit-box-flex: 1;
-			-ms-flex: auto;
-			flex: auto;
-			&:nth-child(1) {
-				width: 40%;
-			}
-			@include ipad_sm {
-				width: 100%;
-			}
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		> .col1 {
+			width: auto;
 		}
-	}
-	h5 {
-		position: relative;
-		margin-bottom: 3rem;
-		@include ipad_sm {
-			margin-bottom: 1.5rem;
+		> .col2 {
+			width: 40%;
 		}
-		&.drop {
-			@include ipad_sm {
-				cursor: pointer;
-				margin-bottom: 0;
-			}
-			&:after {
-				position: absolute;
-				top: 0.6rem;
-				right: 0;
-				@include chev;
-				width: 1rem;
-				height: 1rem;
-				@include ipad_sm {
-					content: "";
-				}
-			}
-			@include ipad_sm {
-				& + .list {
-					display: none;
-					margin-top: 1.5rem;
-				}
-			}
+		> .col3 {
+			width: 34%;
 		}
 	}
 	.list {
 		@include list;
-		@include flex(center, center, wrap);
-		margin: -0.2rem -0.5rem;
+		@include flex(center, $flow: wrap);
+		margin: -0.7rem -0.5rem;
 		> li {
 			display: block;
-			padding: 0.2rem 0.5rem;
-			// &:not(:nth-last-child(1)) {
-			// 	margin-bottom: 1rem;
-			// }
+			width: 50%;
+			padding: 0.7rem 0.5rem;
 		}
 	}
 	.subscribe {
-		@include flex(center, space-between, column);
-		// padding-bottom: 3rem;
-		margin-bottom: 2rem;
-		// border-bottom: 0.1rem solid rgba($light, 0.2);
+		@include flex(null, space-between, column);
 		@include ipad_sm {
 			-webkit-box-orient: vertical;
 			-webkit-box-direction: normal;
@@ -356,10 +343,11 @@ footer {
 			flex-flow: column;
 		}
 		> span {
-			font-size: 2rem;
+			font-size: 1.6rem;
 			// font-weight: 400;
-			max-width: 32rem;
-			text-align: center;
+			max-width: 30rem;
+			// text-align: center;
+			line-height: 1.4;
 			margin-bottom: 1.5rem;
 		}
 		form {
@@ -368,8 +356,12 @@ footer {
 			max-width: 40rem;
 			.input {
 				height: 6rem;
-				color: $black;
+				background: transparent;
+				color: $light;
 				padding-right: 6rem;
+				&:not(:hover) {
+					border-color: rgba($light, 0.3);
+				}
 			}
 			button {
 				@include pos;
@@ -384,21 +376,31 @@ footer {
 				border-radius: 0.6rem;
 				&:hover {
 					background: $black;
-					> img {
-						-webkit-filter: brightness(0) invert(1);
-						filter: brightness(0) invert(1);
-					}
 				}
 				> img {
-					@include trans;
-					-webkit-filter: brightness(0) invert(0);
-					filter: brightness(0) invert(0);
+					-webkit-filter: brightness(0) invert(1);
+					filter: brightness(0) invert(1);
 				}
 			}
 		}
 	}
+	hr {
+		margin: 6rem 0 3rem;
+	}
+	.sm_list {
+		@include list;
+		@include flex($flow: wrap);
+		margin: 0 -1.5rem;
+		> li {
+			padding: 0 1.5rem;
+		}
+	}
 	.copyright {
-		margin-top: 3rem;
+		@include flex(center, space-between);
+		margin-top: 1rem;
+		p {
+			margin: 0;
+		}
 	}
 }
 
@@ -425,6 +427,7 @@ footer {
 			border-radius: 75%;
 			footer & {
 				background: rgba($light, 0.2);
+				border-radius: 1rem;
 			}
 			&:hover {
 				background: $color;
@@ -444,7 +447,7 @@ footer {
 */
 
 #banner {
-	@include bg(cover);
+	@include bg;
 	padding: 0;
 	&:before {
 		@include overlay(linear-gradient(-45deg, #1de8b0 0%, #201e98 100%), 0.9);
@@ -556,10 +559,10 @@ footer {
 	}
 	.main_row {
 		> .col1 {
-			width: 35%;
+			width: 32%;
 		}
 		> .col2 {
-			width: 65%;
+			width: 68%;
 		}
 	}
 	.sub_row {
@@ -572,6 +575,9 @@ footer {
 	}
 	.inner {
 		@include block;
+		h3 {
+			color: $color;
+		}
 	}
 }
 
@@ -585,6 +591,35 @@ footer {
 	.main_row {
 		> .col {
 			width: 50%;
+		}
+	}
+	.inner {
+		@include block($p: 0);
+		overflow: hidden;
+		.fig {
+			@include img($pb: 60%);
+			&:hover {
+				> a {
+					-webkit-transform: scale(1.1);
+					-ms-transform: scale(1.1);
+					transform: scale(1.1);
+				}
+			}
+			> a {
+				@include pos;
+				> img {
+					@include object;
+				}
+			}
+		}
+		.txt {
+			padding: 2.5rem;
+			h2 {
+				text-transform: uppercase;
+			}
+			h4 {
+				color: $color;
+			}
 		}
 	}
 }
@@ -625,13 +660,9 @@ footer {
 		content: "";
 		@include pos($z: 1);
 		background-image: inherit;
-		@include bg(contain, center right);
+		@include bg(contain, bottom);
 		-webkit-transform: rotateY(180deg);
 		transform: rotateY(180deg);
-		// background: $light;
-		// background: #edeff3;
-		// -webkit-clip-path: polygon(0 0, 100% calc(0% + 4rem), 100% 100%, 0 calc(100% - 4rem));
-		// clip-path: polygon(0 0, 100% calc(0% + 4rem), 100% 100%, 0 calc(100% - 4rem));
 	}
 	.contain {
 		z-index: 3;
@@ -670,12 +701,13 @@ footer {
 */
 
 #choose {
+	@include bg(100% 100%);
 	.flex_row {
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
 		> .col {
-			width: 25%;
+			width: 33.3334%;
 			@include ipad_sm {
 				width: 50%;
 			}
@@ -685,24 +717,18 @@ footer {
 		}
 	}
 	.content {
-		max-width: 70rem;
+		max-width: 80rem;
 		margin: 0 auto 4rem;
-	}
-	& + #folio {
-		padding-top: 4rem;
 	}
 }
 
 .choose_blk {
-	@include block;
+	@include block($p: 6rem 5rem);
 	.ico {
 		width: 8rem;
 		min-width: 8rem;
 		height: 8rem;
-		background: rgba($color, 0.1);
 		margin: 0 auto 2rem;
-		padding: 1rem;
-		border-radius: 1rem;
 	}
 	.txt {
 		h4 {
@@ -716,15 +742,55 @@ footer {
 
 /*
 |----------------------------------------------------------------------
+|       Agency
+|----------------------------------------------------------------------
+*/
+
+#agency {
+	background-size: 0;
+	&:before {
+		content: "";
+		@include pos;
+		background-image: inherit;
+		@include bg(contain, right center);
+		-webkit-transform: translateY(40rem);
+		-ms-transform: translateY(40rem);
+		transform: translateY(40rem);
+	}
+	.contain {
+		position: relative;
+		z-index: 3;
+	}
+	.fig {
+		@include img($pb: 60%);
+		@include mobile {
+			padding-bottom: 70%;
+		}
+		> img {
+			@include object($fill: true);
+		}
+	}
+	.content {
+		@include block($p: 4rem);
+		max-width: 80rem;
+		margin: -8rem auto 0;
+		@include mobile {
+			margin: -2rem 2rem 0;
+		}
+	}
+}
+
+/*
+|----------------------------------------------------------------------
 |       Assets
 |----------------------------------------------------------------------
 */
 
 #assets {
-	@include bg(cover);
+	@include bg;
 	padding: 0;
 	&:before {
-		@include overlay($black, 0.8);
+		@include overlay(linear-gradient(-45deg, #1de8b0 0%, #201e98 100%), 0.9);
 	}
 	.contain {
 		z-index: 3;
@@ -740,11 +806,11 @@ footer {
 		padding: 8rem 0;
 	}
 	.content {
-		max-width: 66rem;
+		max-width: 88rem;
 		color: $light;
 		margin: 0 auto;
 		h1 {
-			font-size: 4.6rem;
+			font-size: 5.4rem;
 			@include mobile {
 				font-size: 4rem;
 			}
@@ -1154,7 +1220,7 @@ footer {
 		padding: 2rem 0 0;
 		h4 {
 			display: -webkit-box;
-			min-height: 4.8rem;
+			min-height: 5.2rem;
 			line-clamp: 2;
 			-webkit-line-clamp: 2;
 			-webkit-box-orient: vertical;
@@ -1177,7 +1243,7 @@ footer {
 */
 
 #what {
-	@include bg(cover);
+	@include bg;
 	.main_row {
 		@include ipad_sm {
 			@include slider;

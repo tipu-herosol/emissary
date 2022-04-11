@@ -1,6 +1,6 @@
 import React from "react";
 
-function TermsConditionsBlk() {
+function TermsConditions() {
 	return (
 		<>
 			<section id="terms">
@@ -90,4 +90,4 @@ function TermsConditionsBlk() {
 	);
 }
 
-export default TermsConditionsBlk;
+export default TermsConditions;

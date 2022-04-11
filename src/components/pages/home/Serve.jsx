@@ -9,7 +9,7 @@ function Serve({ data }) {
 					<div className="flex_row main_row">
 						{data.block.map((val) => {
 							return (
-								<div className="col">
+								<div className="col" key={val.id}>
 									<div className="inner">
 										<div className="fig">
 											<Link to={val.btn_link}>

@@ -5,7 +5,7 @@ import Logo from "../includes/Logo";
 function Error404({ data }) {
 	return (
 		<>
-			<section id="oops">
+			<section id="oops" style={{ backgroundImage: "url(" + data.sec_bg + ")" }}>
 				<div className="table_dv">
 					<div className="table_cell">
 						<Logo />

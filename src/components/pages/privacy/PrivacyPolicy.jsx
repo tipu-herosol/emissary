@@ -1,6 +1,6 @@
 import React from "react";
 
-function PrivacyPolicyBlk() {
+function PrivacyPolicy() {
 	return (
 		<>
 			<section id="terms">
@@ -61,4 +61,4 @@ function PrivacyPolicyBlk() {
 	);
 }
 
-export default PrivacyPolicyBlk;
+export default PrivacyPolicy;

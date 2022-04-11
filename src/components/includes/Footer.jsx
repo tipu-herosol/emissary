@@ -6,7 +6,39 @@ import SocialLinks from "./SocialLinks";
 
 function Footer() {
 	const data = {
-		list: [
+		list_01: [
+			{
+				id: 1,
+				text: "Home",
+				link: "/",
+			},
+			{
+				id: 2,
+				text: "About us",
+				link: "/about",
+			},
+			{
+				id: 3,
+				text: "Solutions",
+				link: "/solutions",
+			},
+			{
+				id: 4,
+				text: "FAQ’s",
+				link: "/faq",
+			},
+			{
+				id: 5,
+				text: "Blog Posts",
+				link: "/blog",
+			},
+			{
+				id: 6,
+				text: "Contact us",
+				link: "/contact",
+			},
+		],
+		list_02: [
 			{
 				id: 1,
 				text: "Privacy Policy",
@@ -23,15 +55,44 @@ function Footer() {
 				link: "/disclaimer",
 			},
 		],
+		copyright: {
+			start: "Copyright © 2022 ",
+			mid: "Emissary Recruiting Solutions, Inc.",
+			last: "All rights reserved.",
+		},
 	};
 	return (
 		<>
 			<footer>
 				<div className="contain">
-					<Logo />
-					<Newsletter />
-					<ul className="list">
-						{data.list.map((val) => {
+					<div className="flex_row main_row">
+						<div className="col col1">
+							<div className="in_col">
+								<Logo />
+							</div>
+						</div>
+						<div className="col col2">
+							<div className="in_col">
+								<ul className="list">
+									{data.list_01.map((val) => {
+										return (
+											<li key={val.id}>
+												<Link to={val.link}>{val.text}</Link>
+											</li>
+										);
+									})}
+								</ul>
+							</div>
+						</div>
+						<div className="col col3">
+							<div className="in_col">
+								<Newsletter />
+							</div>
+						</div>
+					</div>
+					<hr />
+					<ul className="sm_list">
+						{data.list_02.map((val) => {
 							return (
 								<li key={val.id}>
 									<Link to={val.link}>{val.text}</Link>
@@ -39,10 +100,12 @@ function Footer() {
 							);
 						})}
 					</ul>
-					<p className="copyright text-center">
-						Copyright © 2022 <Link to="/">Emissary Recruiting Solutions, Inc.</Link> All rights reserved.
-					</p>
-					<SocialLinks />
+					<div className="copyright">
+						<p className="text-center">
+							{data.copyright.start} <Link to="/">{data.copyright.mid}</Link> {data.copyright.last}
+						</p>
+						<SocialLinks />
+					</div>
 				</div>
 			</footer>
 		</>

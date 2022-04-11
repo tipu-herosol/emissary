@@ -14,7 +14,7 @@ body {
 	min-height: 100vh;
 	background-color: $light;
 	color: $black;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	font-family: $font;
 	font-weight: 400;
 	margin: 0;
@@ -2165,7 +2165,7 @@ input {
 	.flex_box {
 		@include flex(center, center);
 		min-height: 20rem;
-		padding: 8rem 0;
+		padding: 16rem 0 8rem;
 		&.center {
 			-webkit-box-align: center;
 			-ms-flex-align: center;
@@ -2179,7 +2179,7 @@ input {
 		text-align: center;
 		margin: 0 auto;
 		> h1 {
-			font-size: 4rem;
+			// font-size: 4rem;
 			margin-bottom: 0;
 			line-height: 1.1;
 			text-shadow: 0.5rem 0.5rem 0.5rem rgba($black, 0.3);

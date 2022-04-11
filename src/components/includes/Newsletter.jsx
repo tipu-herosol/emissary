@@ -13,7 +13,7 @@ function Newsletter() {
 	return (
 		<>
 			<div className="subscribe">
-				<span className="fancy">Subscribe to keep update on new products, offers and more.</span>
+				<span>Subscribe to keep update on new products, offers and more.</span>
 				<form action="" method="POST" onSubmit={handleInput}>
 					<input type="text" name="email" id="email" value={formVal.email} onChange={handleInput} className="input" placeholder="Enter Email Address" />
 					<button type="submit">

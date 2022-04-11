@@ -86,7 +86,7 @@ $star: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/
 	opacity: $opacity;
 }
 
-@mixin bg($size, $pos: center, $attach: null) {
+@mixin bg($size: cover, $pos: center, $attach: null) {
 	background-size: $size;
 	background-position: $pos;
 	background-repeat: no-repeat;

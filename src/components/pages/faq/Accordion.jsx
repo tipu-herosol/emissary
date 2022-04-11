@@ -8,7 +8,6 @@ function Accordion({ data }) {
 				<div className="contain">
 					<div className="faq_lst">
 						{data.block.map((val) => {
-							// const { id } = val;
 							return <FaqBlk key={val.id} {...val} />;
 						})}
 					</div>
