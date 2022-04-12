@@ -5,7 +5,7 @@ function Logon({ data }) {
 	const [formVal, setFormVal] = useState({
 		email: "",
 	});
-	const handleInput = (e) => {
+	const inputHandle = (e) => {
 		const name = e.target.name;
 		const value = e.target.value;
 		setFormVal({ ...formVal, [name]: value });
@@ -14,7 +14,7 @@ function Logon({ data }) {
 		<>
 			<section id="logon">
 				<div className="contain sm">
-					<form action="" method="POST" onSubmit={handleInput}>
+					<form action="" method="POST" onSubmit={inputHandle}>
 						<div className="log_blk">
 							<div className="txt text-center">
 								<h4>{data.heading}</h4>
@@ -24,7 +24,7 @@ function Logon({ data }) {
 								<div className="col-xs-12">
 									<h6 className="require">Email Address</h6>
 									<div className="form_blk">
-										<input type="text" name="email" id="email" value={formVal.email} onChange={handleInput} className="input" placeholder="eg: sample@gmail.com" />
+										<input type="text" name="email" id="email" value={formVal.email} onChange={inputHandle} className="input" placeholder="eg: sample@gmail.com" />
 									</div>
 								</div>
 							</div>
