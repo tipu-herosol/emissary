@@ -526,7 +526,7 @@ footer {
 				width: 12rem;
 				height: 4rem;
 				margin: auto;
-				@include trans();
+				@include trans;
 				&:hover {
 					-webkit-filter: brightness(1) invert(0) grayscale(1);
 					filter: brightness(1) invert(0) grayscale(1);
@@ -1264,5 +1264,91 @@ footer {
 				@include object($fill: true);
 			}
 		}
+	}
+}
+
+/*
+|----------------------------------------------------------------------
+|       Logon
+|----------------------------------------------------------------------
+*/
+
+#logon {
+	&:before {
+		content: "";
+		@include pos($pos: fixed, $b: null, $z: 1);
+		height: 8rem;
+		background: $black;
+	}
+	padding-top: 14rem;
+	form {
+		max-width: 40rem;
+		margin: 0 auto;
+	}
+	.log_blk {
+		@include block;
+		padding: 4rem;
+		@include ipad_sm {
+			padding: 3rem;
+		}
+		.txt {
+			margin-bottom: 2rem;
+		}
+	}
+	.or {
+		position: relative;
+		font-size: 1.2rem;
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 1.5rem 0;
+		z-index: 1;
+		&:before,
+		&:after {
+			content: "";
+			@include pos;
+			height: 0.1rem;
+			background: $light_gray;
+			margin: auto;
+			z-index: -1;
+		}
+		&:before {
+			right: 50%;
+			margin-right: 2rem;
+		}
+		&:after {
+			left: 50%;
+			margin-left: 2rem;
+		}
+	}
+	.social_btn {
+		display: flex;
+		gap: 1rem;
+		margin: 2rem 0;
+		@include ipad_sm {
+			flex-flow: wrap;
+		}
+		button {
+			flex: auto;
+			min-width: 22rem;
+			img {
+				width: 2rem;
+				min-width: 2rem;
+				height: 2rem;
+				filter: none;
+			}
+			&.gm_btn {
+				background: $light;
+				color: $black;
+				border: 0.1rem solid $dark_gray;
+			}
+			&.fb_btn {
+				background: #1877f2;
+			}
+		}
+	}
+	.forgot {
+		margin-top: 1rem;
+		font-weight: 600;
 	}
 }

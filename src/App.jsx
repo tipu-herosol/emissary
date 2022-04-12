@@ -13,6 +13,11 @@ import Faq from "./components/pages/faq/Index";
 import Privacy from "./components/pages/privacy/Index";
 import Disclaim from "./components/pages/disclaimer/Index";
 import Terms from "./components/pages/terms/Index";
+
+import SignIn from "./components/pages/signin/Index";
+import SignUp from "./components/pages/signup/Index";
+import Forgot from "./components/pages/forgot/Index";
+import Reset from "./components/pages/reset/Index";
 // import Services from "./components/pages/Services";
 // import ServiceDetail from "./components/pages/ServiceDetail";
 import Error from "./components/pages/error/Index";
@@ -53,6 +58,11 @@ function App() {
 						<Route exact path="/privacy-policy" element={<Privacy />} />
 						<Route exact path="/disclaimer" element={<Disclaim />} />
 						<Route exact path="/terms-conditions" element={<Terms />} />
+
+						<Route exact path="/signin" element={<SignIn />} />
+						<Route exact path="/signup" element={<SignUp />} />
+						<Route exact path="/forgot-password" element={<Forgot />} />
+						<Route exact path="/reset-password" element={<Reset />} />
 					</Route>
 					<Route path="*" element={<Error />} />
 				</Routes>

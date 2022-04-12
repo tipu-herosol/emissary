@@ -519,6 +519,46 @@ const Data = {
 			heading: "Terms & Conditions",
 		},
 	},
+	signin: {
+		heading: "Sign in",
+		para: "Don’t have an account?",
+		para_ex: "Sign up",
+		para_link: "/signup",
+		form: {
+			btn: "Sign in",
+		},
+		forgot: "Forgot Password?",
+		forgot_link: "/forgot-password",
+	},
+	signup: {
+		heading: "Sign up",
+		para: "Already have an account?",
+		para_ex: "Sign in",
+		para_link: "/signin",
+		form: {
+			btn: "Create Account",
+			label: {
+				text_01: "Privacy Policy",
+				link_01: "/privacy-policy",
+				text_02: "Terms & Conditions",
+				link_02: "/terms-conditions",
+			},
+		},
+	},
+	forgot: {
+		heading: "Forgot Password",
+		para: "Don’t worry. Just enter the email address you registered with and we’ll email you instructions to reset your password.",
+		form: {
+			btn: "Reset Password",
+		},
+	},
+	reset: {
+		heading: "Reset Password",
+		para: "Enter a new password for your account.",
+		form: {
+			btn: "Change Password",
+		},
+	},
 	error: {
 		sec_bg: "/images/layer_02.svg",
 		num: "404",
