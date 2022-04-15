@@ -4,12 +4,13 @@ import Banner from "./Banner";
 import Brands from "./Brands";
 import Blocks from "./Blocks";
 import Serve from "./Serve";
+import PricingPlan from "../../common/PricingPlan";
 import Choose from "../../common/Choose";
 import Agency from "./Agency";
 import Posts from "./Posts";
 
 const Home = () => {
-	const { banner, brands, blocks, serve, choose, agency, posts } = Data.home;
+	const { banner, brands, blocks, serve, choose, pricing, agency, posts } = Data.home;
 	return (
 		<>
 			<Banner data={banner} />
@@ -17,6 +18,7 @@ const Home = () => {
 			<Blocks data={blocks} />
 			<Serve data={serve} />
 			<Choose data={choose} />
+			<PricingPlan data={pricing} headingShow={true} />
 			<Agency data={agency} />
 			<Posts data={posts} />
 		</>

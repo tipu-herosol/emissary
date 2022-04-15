@@ -99,7 +99,7 @@ const Data = {
 		choose: {
 			sec_bg: "/images/layer_02.svg",
 			heading: "Full Service Digital Marketing Agency and Consultancy",
-			para: "Alpha Digital can help you get a handle on your digital marketing from local seo solutions to client conversion software.",
+			para: "Full Service Digital Marketing Agency and Consultancy can help you get a handle on your digital marketing from local seo solutions to client conversion software.",
 			block: [
 				{
 					id: 1,
@@ -118,6 +118,113 @@ const Data = {
 					icon: "/images/icon-blackboard.svg",
 					title: "Real-Time Social Media Analytics",
 					para: "We produce bespoke reports and technical audits that can help your business with specific areas of digital marketing.",
+				},
+			],
+		},
+		pricing: {
+			heading: "Our Pricing Plans",
+			block: [
+				{
+					id: 1,
+					title: "Business",
+					price: "$99",
+					duration: "/month",
+					list: [
+						{
+							id: 1,
+							li: "5GB Linux Web Space",
+						},
+						{
+							id: 2,
+							li: "5 MySQL Databases",
+						},
+						{
+							id: 3,
+							li: "Unlimited Email",
+						},
+						{
+							id: 4,
+							li: "250Gb Monthly Transfer",
+						},
+						{
+							id: 5,
+							li: "24/7 Tech Support",
+						},
+						{
+							id: 6,
+							li: "Daily Backups",
+						},
+					],
+					btn: "Get Started",
+					btn_link: "/dashboard",
+				},
+				{
+					id: 2,
+					title: "Professional",
+					price: "$219",
+					duration: "/month",
+					list: [
+						{
+							id: 1,
+							li: "5GB Linux Web Space",
+						},
+						{
+							id: 2,
+							li: "5 MySQL Databases",
+						},
+						{
+							id: 3,
+							li: "Unlimited Email",
+						},
+						{
+							id: 4,
+							li: "250Gb Monthly Transfer",
+						},
+						{
+							id: 5,
+							li: "24/7 Tech Support",
+						},
+						{
+							id: 6,
+							li: "Daily Backups",
+						},
+					],
+					btn: "Get Started",
+					btn_link: "/dashboard",
+				},
+				{
+					id: 3,
+					title: "Enterprise",
+					price: "$419",
+					duration: "/month",
+					list: [
+						{
+							id: 1,
+							li: "5GB Linux Web Space",
+						},
+						{
+							id: 2,
+							li: "5 MySQL Databases",
+						},
+						{
+							id: 3,
+							li: "Unlimited Email",
+						},
+						{
+							id: 4,
+							li: "250Gb Monthly Transfer",
+						},
+						{
+							id: 5,
+							li: "24/7 Tech Support",
+						},
+						{
+							id: 6,
+							li: "Daily Backups",
+						},
+					],
+					btn: "Get Started",
+					btn_link: "/dashboard",
 				},
 			],
 		},
@@ -497,6 +604,119 @@ const Data = {
 					id: 7,
 					qst: "Iusto harum temporibus vel, rem numquam quia?",
 					ans: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+				},
+			],
+		},
+	},
+	pricing: {
+		cover: {
+			sec_bg: "/images/email_marketing.jpg",
+			heading: "Pricing Plan",
+		},
+		plan: {
+			// heading: "Our Pricing Plans",
+			block: [
+				{
+					id: 1,
+					title: "Business",
+					price: "$99",
+					duration: "/month",
+					list: [
+						{
+							id: 1,
+							li: "5GB Linux Web Space",
+						},
+						{
+							id: 2,
+							li: "5 MySQL Databases",
+						},
+						{
+							id: 3,
+							li: "Unlimited Email",
+						},
+						{
+							id: 4,
+							li: "250Gb Monthly Transfer",
+						},
+						{
+							id: 5,
+							li: "24/7 Tech Support",
+						},
+						{
+							id: 6,
+							li: "Daily Backups",
+						},
+					],
+					btn: "Get Started",
+					btn_link: "/dashboard",
+				},
+				{
+					id: 2,
+					title: "Professional",
+					price: "$219",
+					duration: "/month",
+					list: [
+						{
+							id: 1,
+							li: "5GB Linux Web Space",
+						},
+						{
+							id: 2,
+							li: "5 MySQL Databases",
+						},
+						{
+							id: 3,
+							li: "Unlimited Email",
+						},
+						{
+							id: 4,
+							li: "250Gb Monthly Transfer",
+						},
+						{
+							id: 5,
+							li: "24/7 Tech Support",
+						},
+						{
+							id: 6,
+							li: "Daily Backups",
+						},
+					],
+					btn: "Get Started",
+					btn_link: "/dashboard",
+				},
+				{
+					id: 3,
+					title: "Enterprise",
+					price: "$419",
+					duration: "/month",
+					list: [
+						{
+							id: 1,
+							li: "5GB Linux Web Space",
+						},
+						{
+							id: 2,
+							li: "5 MySQL Databases",
+						},
+						{
+							id: 3,
+							li: "Unlimited Email",
+						},
+						{
+							id: 4,
+							li: "250Gb Monthly Transfer",
+						},
+						{
+							id: 5,
+							li: "24/7 Tech Support",
+						},
+						{
+							id: 6,
+							li: "Daily Backups",
+						},
+					],
+					btn: "Get Started",
+					btn_link: "/dashboard",
 				},
 			],
 		},

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 
-function Header() {
+function Header({ logged }) {
 	const [scroll, setScroll] = useState(false);
 	const [toggle, setToggle] = useState(false);
 	useEffect(() => {
@@ -16,16 +16,29 @@ function Header() {
 
 	return (
 		<>
-			<header className={scroll ? "fix" : ""}>
-				<div className="contain">
-					<Logo />
-					<button type="button" className={!toggle ? "toggle" : "toggle active"} onClick={() => ToggleActive(!toggle)}>
-						<span></span>
-					</button>
-					<Navigation active={toggle} toggle={ToggleActive} />
-					<div className="clearfix"></div>
-				</div>
-			</header>
+			{!logged ? (
+				<header className={scroll ? "fix" : ""}>
+					<div className="contain">
+						<Logo />
+						<button type="button" className={!toggle ? "toggle" : "toggle active"} onClick={() => ToggleActive(!toggle)}>
+							<span></span>
+						</button>
+						<Navigation active={toggle} toggle={ToggleActive} />
+						<div className="clearfix"></div>
+					</div>
+				</header>
+			) : (
+				<header className="fix">
+					<div className="contain">
+						<Logo />
+						<button type="button" className={!toggle ? "toggle" : "toggle active"} onClick={() => ToggleActive(!toggle)}>
+							<span></span>
+						</button>
+						<Navigation active={toggle} toggle={ToggleActive} />
+						<div className="clearfix"></div>
+					</div>
+				</header>
+			)}
 		</>
 	);
 }

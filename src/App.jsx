@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route, BrowserRouter, Outlet } from "react-router-dom";
 
+// Common Pages
 import ScrollToTop from "./components/common/ScrollToTop";
 import Header from "./components/includes/Header";
 import Footer from "./components/includes/Footer";
@@ -10,18 +11,22 @@ import Blog from "./components/pages/blog/Index";
 import BlogDetail from "./components/pages/blog_detail/Index";
 import Contact from "./components/pages/contact/Index";
 import Faq from "./components/pages/faq/Index";
+import Pricing from "./components/pages/pricing/Index";
 import Privacy from "./components/pages/privacy/Index";
 import Disclaim from "./components/pages/disclaimer/Index";
 import Terms from "./components/pages/terms/Index";
 
+// Logon Pages
 import SignIn from "./components/pages/signin/Index";
 import SignUp from "./components/pages/signup/Index";
 import Forgot from "./components/pages/forgot/Index";
 import Reset from "./components/pages/reset/Index";
-// import Services from "./components/pages/Services";
-// import ServiceDetail from "./components/pages/ServiceDetail";
-import Error from "./components/pages/error/Index";
 
+// Account Pages
+import Dashboard from "./components/pages/dashboard/Index";
+
+// Error Pages & Popups
+import Error from "./components/pages/error/Index";
 import PopupVideo from "./components/common/PopupVideo";
 
 function App() {
@@ -36,7 +41,14 @@ function App() {
 	};
 	const PageLayout = () => (
 		<>
-			<Header />
+			<Header logged={false} />
+			<Outlet />
+			<Footer />
+		</>
+	);
+	const PageLogLayout = () => (
+		<>
+			<Header logged={true} />
 			<Outlet />
 			<Footer />
 		</>
@@ -55,6 +67,7 @@ function App() {
 						<Route exact path="/blog/blog-detail" element={<BlogDetail />} />
 						<Route exact path="/contact" element={<Contact />} />
 						<Route exact path="/faq" element={<Faq />} />
+						<Route exact path="/pricing" element={<Pricing />} />
 						<Route exact path="/privacy-policy" element={<Privacy />} />
 						<Route exact path="/disclaimer" element={<Disclaim />} />
 						<Route exact path="/terms-conditions" element={<Terms />} />
@@ -63,6 +76,9 @@ function App() {
 						<Route exact path="/signup" element={<SignUp />} />
 						<Route exact path="/forgot-password" element={<Forgot />} />
 						<Route exact path="/reset-password" element={<Reset />} />
+					</Route>
+					<Route element={<PageLogLayout />}>
+						<Route exact path="/dashboard" element={<Dashboard />} />
 					</Route>
 					<Route path="*" element={<Error />} />
 				</Routes>

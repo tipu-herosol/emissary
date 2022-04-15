@@ -8,7 +8,7 @@ function Choose({ data }) {
 				<div className="contain text-center">
 					<div className="content">
 						<h1>{data.heading}</h1>
-						<p className="size_4">{data.para}</p>
+						<p className="size_5">{data.para}</p>
 					</div>
 					<div className="flex_row main_row">
 						{data.block.map((val) => {
