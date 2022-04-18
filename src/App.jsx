@@ -24,6 +24,7 @@ import Reset from "./components/pages/reset/Index";
 
 // Account Pages
 import Dashboard from "./components/pages/dashboard/Index";
+import Profile from "./components/pages/profile/Index";
 
 // Error Pages & Popups
 import Error from "./components/pages/error/Index";
@@ -79,6 +80,7 @@ function App() {
 					</Route>
 					<Route element={<PageLogLayout />}>
 						<Route exact path="/dashboard" element={<Dashboard />} />
+						<Route exact path="/profile-settings" element={<Profile />} />
 					</Route>
 					<Route path="*" element={<Error />} />
 				</Routes>

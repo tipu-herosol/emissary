@@ -1,11 +1,12 @@
 import React from "react";
+import Data from "../../dummy";
+import Account from "./Account";
 
 const Dashboard = () => {
+	const { account } = Data.dashboard;
 	return (
 		<>
-			<section id="dash">
-				<div className="contain">dashboard</div>
-			</section>
+			<Account data={account} />
 		</>
 	);
 };

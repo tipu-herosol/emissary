@@ -879,6 +879,13 @@ textarea {
 	}
 	&_down {
 		position: relative;
+		&:hover {
+			.drop_cnt {
+				margin-top: 0;
+				visibility: visible;
+				opacity: 1;
+			}
+		}
 	}
 	&_cnt {
 		position: absolute;

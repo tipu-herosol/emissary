@@ -779,6 +779,201 @@ const Data = {
 			btn: "Change Password",
 		},
 	},
+	dashboard: {
+		account: {
+			heading_01: "Application Overview",
+			card: [
+				{
+					id: 1,
+					num: "450",
+					text: "Job Applied",
+				},
+				{
+					id: 2,
+					num: "1500",
+					text: "online test complted",
+				},
+				{
+					id: 3,
+					num: "175",
+					text: "Interview attened",
+				},
+				{
+					id: 4,
+					num: "938",
+					text: "assement center attended",
+				},
+				{
+					id: 5,
+					num: "450",
+					text: "Offer received",
+				},
+				{
+					id: 6,
+					num: "80%",
+					text: "rate of passing intial stage",
+				},
+				{
+					id: 7,
+					num: "72%",
+					text: "test pass rate",
+				},
+				{
+					id: 8,
+					num: "35%",
+					text: "interview pass rate",
+				},
+				{
+					id: 9,
+					num: "60%",
+					text: "assessment center pass rate",
+				},
+				{
+					id: 10,
+					num: "29%",
+					text: "all application success rate",
+				},
+			],
+			heading_02: "Job Application Progress",
+			btn: "Add new",
+			btn_link: "/add-new-job",
+			jobs: [
+				{
+					id: 1,
+					src: "/images/companies/01.png",
+					alt: "Surge",
+					title: "Senior Full-Stack Software Engineer - React / Node.js",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 2,
+					src: "/images/companies/02.png",
+					alt: "ABA",
+					title: "Full-time Content Creator",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 3,
+					src: "/images/companies/03.png",
+					alt: "Asterik",
+					title: "Senior Technical Specialist - Service Now",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 4,
+					src: "/images/companies/04.png",
+					alt: "Cuku",
+					title: "Trainee Project Coordinator - Part time",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 5,
+					src: "/images/companies/05.png",
+					alt: "OKTA",
+					title: "Software Engineer / Senior Software Engineer",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 6,
+					src: "/images/companies/01.png",
+					alt: "Surge",
+					title: "Senior Full-Stack Software Engineer - React / Node.js",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 7,
+					src: "/images/companies/02.png",
+					alt: "ABA",
+					title: "Full-time Content Creator",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 8,
+					src: "/images/companies/03.png",
+					alt: "Asterik",
+					title: "Senior Technical Specialist - Service Now",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 9,
+					src: "/images/companies/04.png",
+					alt: "Cuku",
+					title: "Trainee Project Coordinator - Part time",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+				{
+					id: 10,
+					src: "/images/companies/05.png",
+					alt: "OKTA",
+					title: "Software Engineer / Senior Software Engineer",
+					link: "/job-detail",
+					company: "Envision Technologies Inc.",
+					company_link: "https://www.google.com/",
+					act_btn: {
+						edit: "Edit",
+					},
+				},
+			],
+		},
+	},
+	settings: {
+		personal_info: {
+			heading: "Personal information",
+			dp: "/images/01.jpg",
+			dp_alt: "DP",
+		},
+		address_info: {
+			heading: "Address information",
+		},
+		change_pass: {
+			heading: "Change Password",
+		},
+	},
 	error: {
 		sec_bg: "/images/layer_02.svg",
 		num: "404",

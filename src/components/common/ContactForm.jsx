@@ -12,7 +12,6 @@ function ContactForm({ formData }) {
 	const inputHandle = (e) => {
 		const name = e.target.name;
 		const value = e.target.value;
-
 		setFormVal({ ...formVal, [name]: value });
 	};
 	return (

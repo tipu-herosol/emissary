@@ -58,6 +58,112 @@ header {
 			@include flex;
 		}
 	}
+	#icon_btn {
+		@include flex(center);
+		@include list();
+		margin: 0 -2rem;
+		margin-left: 2rem;
+		li {
+			padding: 0 2rem;
+			&#noti {
+				.active {
+					img {
+						-webkit-animation: ring 4s 2s ease-in-out infinite;
+						animation: ring 4s 2s ease-in-out infinite;
+					}
+				}
+			}
+			> a,
+			> button {
+				position: relative;
+				display: -webkit-box !important;
+				display: -ms-flexbox !important;
+				display: flex !important;
+				width: 2.5rem;
+				height: 2.5rem;
+				background: transparent;
+				padding: 0;
+				border: 0;
+				&.active {
+					&::before {
+						content: "";
+					}
+					> img {
+						-webkit-filter: none;
+						filter: none;
+					}
+				}
+				&::before {
+					position: absolute;
+					top: -0.1rem;
+					right: 0.2rem;
+					width: 1rem;
+					height: 1rem;
+					background: $color;
+					border: 0.2rem solid $light;
+					border-radius: 75%;
+					z-index: 1;
+				}
+				> img {
+					-webkit-filter: brightness(0) invert(1);
+					filter: brightness(0) invert(1);
+					-webkit-transition: inherit;
+					transition: inherit;
+				}
+			}
+		}
+	}
+	#pro_btn {
+		@include flex(center);
+		cursor: pointer;
+		margin-left: 3rem;
+		z-index: 5;
+		@include mobile {
+			margin-left: 2rem;
+		}
+		@include mobile_xs {
+			margin-left: 1.5rem;
+		}
+		.pro_btn {
+			@include flex(center);
+		}
+		.ico {
+			width: 3.5rem;
+			height: 3.5rem;
+			&.icon {
+				background: rgba($color, 0.1);
+				border-radius: 0.6rem;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				> img {
+					-o-object-fit: contain;
+					object-fit: contain;
+				}
+			}
+		}
+		.name {
+			margin-right: 1rem;
+			@include mobile_md {
+				display: none;
+			}
+		}
+		.drop_cnt {
+			left: initial;
+			right: 0;
+			min-width: 18rem;
+			max-height: calc(100vh - 8rem);
+			overflow: auto;
+		}
+		.drop_lst {
+			> li {
+				&:nth-last-child(1) {
+					> a {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
 }
 
 .logo {
@@ -789,6 +895,8 @@ footer {
 			}
 			.btn_blk {
 				margin-top: auto;
+				-webkit-transform: translateY(50%);
+				-ms-transform: translateY(50%);
 				transform: translateY(50%);
 			}
 		}
@@ -1377,19 +1485,25 @@ footer {
 		}
 	}
 	.social_btn {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		gap: 1rem;
 		margin: 2rem 0;
 		@include ipad_sm {
+			-ms-flex-flow: wrap;
 			flex-flow: wrap;
 		}
 		button {
+			-webkit-box-flex: 1;
+			-ms-flex: auto;
 			flex: auto;
 			min-width: 22rem;
 			img {
 				width: 2rem;
 				min-width: 2rem;
 				height: 2rem;
+				-webkit-filter: none;
 				filter: none;
 			}
 			&.gm_btn {
@@ -1405,5 +1519,129 @@ footer {
 	.forgot {
 		margin-top: 1rem;
 		font-weight: 600;
+	}
+}
+
+/*
+|----------------------------------------------------------------------
+|       Dashboard
+|----------------------------------------------------------------------
+*/
+
+#dash {
+	margin-top: 2rem;
+	.card_row {
+		@include row($tb: 1rem, $lr: 1rem);
+		> .col {
+			width: 25%;
+		}
+	}
+	@at-root {
+		.dash_card {
+			@include block;
+			.num {
+				color: $color;
+				font-size: 4rem;
+				font-weight: 700;
+				line-height: 1;
+				margin-bottom: 1rem;
+			}
+			strong {
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.job_blk {
+	@include block;
+	&:not(:nth-last-child(1)) {
+		margin-bottom: 2rem;
+	}
+	> .top {
+		@include flex;
+		.ico {
+			width: 6rem;
+			min-width: 6rem;
+			height: 6rem;
+			margin-right: 1rem;
+			border-radius: 1rem;
+			overflow: hidden;
+		}
+		.title {
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			-ms-flex-item-align: center;
+			align-self: center;
+			.company {
+				a {
+					color: $color;
+				}
+			}
+		}
+		.btn_blk {
+			margin-left: 2rem;
+		}
+	}
+	> .btm {
+		padding-top: 2rem;
+		margin-top: 2rem;
+		border-top: 0.2rem solid $light_gray;
+	}
+}
+
+/*
+|----------------------------------------------------------------------
+|       Settings
+|----------------------------------------------------------------------
+*/
+
+#settings {
+	margin-top: 2rem;
+}
+
+.dp_blk {
+	@include flex(flex-end);
+	margin-bottom: 3rem;
+	@include mobile {
+		-ms-flex-flow: wrap;
+		flex-flow: wrap;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.ico {
+		width: 15rem;
+		min-width: 15rem;
+		height: 15rem;
+		margin-right: 2rem;
+		@include mobile {
+			margin: 0 0 2rem;
+		}
+		@include mobile_md {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&.icon {
+			border-radius: 1rem;
+			background: rgba($color, 0.1);
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			> img {
+				-o-object-fit: contain;
+				object-fit: contain;
+			}
+		}
+	}
+	.txt {
+		@include mobile_md {
+			text-align: center;
+			.btn_blk {
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+			}
+		}
 	}
 }

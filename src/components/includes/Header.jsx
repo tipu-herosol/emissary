@@ -23,7 +23,7 @@ function Header({ logged }) {
 						<button type="button" className={!toggle ? "toggle" : "toggle active"} onClick={() => ToggleActive(!toggle)}>
 							<span></span>
 						</button>
-						<Navigation active={toggle} toggle={ToggleActive} />
+						<Navigation active={toggle} toggle={ToggleActive} logged={false} />
 						<div className="clearfix"></div>
 					</div>
 				</header>
@@ -34,7 +34,7 @@ function Header({ logged }) {
 						<button type="button" className={!toggle ? "toggle" : "toggle active"} onClick={() => ToggleActive(!toggle)}>
 							<span></span>
 						</button>
-						<Navigation active={toggle} toggle={ToggleActive} />
+						<Navigation active={toggle} toggle={ToggleActive} logged={true} />
 						<div className="clearfix"></div>
 					</div>
 				</header>
