@@ -28,7 +28,7 @@ function Header({ logged }) {
 					</div>
 				</header>
 			) : (
-				<header className="fix">
+				<header className="fix logged">
 					<div className="contain">
 						<Logo />
 						<button type="button" className={!toggle ? "toggle" : "toggle active"} onClick={() => ToggleActive(!toggle)}>

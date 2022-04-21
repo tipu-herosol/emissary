@@ -52,6 +52,11 @@ header {
 		-webkit-box-shadow: $shadow;
 		box-shadow: $shadow;
 	}
+	&.logged {
+		& + section {
+			margin-top: 3rem;
+		}
+	}
 	@include trans;
 	.toggle {
 		@include ipad_sm {
@@ -1529,7 +1534,6 @@ footer {
 */
 
 #dash {
-	margin-top: 2rem;
 	.card_row {
 		@include row($tb: 1rem, $lr: 1rem);
 		> .col {
@@ -1596,10 +1600,6 @@ footer {
 |       Settings
 |----------------------------------------------------------------------
 */
-
-#settings {
-	margin-top: 2rem;
-}
 
 .dp_blk {
 	@include flex(flex-end);

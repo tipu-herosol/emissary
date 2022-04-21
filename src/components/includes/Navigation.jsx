@@ -98,6 +98,12 @@ function Navigation({ active, toggle, logged }) {
 										<Link to="/profile-settings">Profile Settings</Link>
 									</li>
 									<li>
+										<Link to="/transactions">Transactions</Link>
+									</li>
+									<li>
+										<Link to="/mine-packages">My Packages</Link>
+									</li>
+									<li>
 										<Link to="/signin">Sign out</Link>
 									</li>
 								</ul>

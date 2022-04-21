@@ -25,6 +25,8 @@ import Reset from "./components/pages/reset/Index";
 // Account Pages
 import Dashboard from "./components/pages/dashboard/Index";
 import Profile from "./components/pages/profile/Index";
+import Transactions from "./components/pages/transactions/Index";
+import Packages from "./components/pages/packages/Index";
 
 // Error Pages & Popups
 import Error from "./components/pages/error/Index";
@@ -81,6 +83,8 @@ function App() {
 					<Route element={<PageLogLayout />}>
 						<Route exact path="/dashboard" element={<Dashboard />} />
 						<Route exact path="/profile-settings" element={<Profile />} />
+						<Route exact path="/transactions" element={<Transactions />} />
+						<Route exact path="/mine-packages" element={<Packages />} />
 					</Route>
 					<Route path="*" element={<Error />} />
 				</Routes>

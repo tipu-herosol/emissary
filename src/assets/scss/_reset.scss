@@ -1861,9 +1861,13 @@ input {
 					&:nth-last-child(1) {
 						padding-right: 2.5rem;
 					}
+					&.nowrap {
+						white-space: nowrap;
+					}
 				}
 				> th {
 					font-weight: 600;
+					white-space: nowrap;
 				}
 			}
 		}

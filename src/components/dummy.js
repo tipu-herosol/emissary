@@ -781,61 +781,26 @@ const Data = {
 	},
 	dashboard: {
 		account: {
-			heading_01: "Application Overview",
+			heading_01: "Stastics",
 			card: [
 				{
 					id: 1,
 					num: "450",
-					text: "Job Applied",
+					text: "Total Jobs",
 				},
 				{
 					id: 2,
 					num: "1500",
-					text: "online test complted",
+					text: "Total Candidates",
 				},
 				{
 					id: 3,
 					num: "175",
-					text: "Interview attened",
-				},
-				{
-					id: 4,
-					num: "938",
-					text: "assement center attended",
-				},
-				{
-					id: 5,
-					num: "450",
-					text: "Offer received",
-				},
-				{
-					id: 6,
-					num: "80%",
-					text: "rate of passing intial stage",
-				},
-				{
-					id: 7,
-					num: "72%",
-					text: "test pass rate",
-				},
-				{
-					id: 8,
-					num: "35%",
-					text: "interview pass rate",
-				},
-				{
-					id: 9,
-					num: "60%",
-					text: "assessment center pass rate",
-				},
-				{
-					id: 10,
-					num: "29%",
-					text: "all application success rate",
+					text: "Total vetted Candidates",
 				},
 			],
-			heading_02: "Job Application Progress",
-			btn: "Add new",
+			heading_02: "Open Jobs",
+			btn: "Post new job",
 			btn_link: "/add-new-job",
 			jobs: [
 				{
@@ -972,6 +937,224 @@ const Data = {
 		},
 		change_pass: {
 			heading: "Change Password",
+		},
+	},
+	packages: {
+		block: [
+			{
+				id: 1,
+				title: "Business",
+				price: "$99",
+				duration: "/month",
+				list: [
+					{
+						id: 1,
+						li: "5GB Linux Web Space",
+					},
+					{
+						id: 2,
+						li: "5 MySQL Databases",
+					},
+					{
+						id: 3,
+						li: "Unlimited Email",
+					},
+					{
+						id: 4,
+						li: "250Gb Monthly Transfer",
+					},
+					{
+						id: 5,
+						li: "24/7 Tech Support",
+					},
+					{
+						id: 6,
+						li: "Daily Backups",
+					},
+				],
+				btn: "Get Started",
+				btn_link: "/dashboard",
+			},
+			{
+				id: 2,
+				title: "Professional",
+				price: "$219",
+				duration: "/month",
+				list: [
+					{
+						id: 1,
+						li: "5GB Linux Web Space",
+					},
+					{
+						id: 2,
+						li: "5 MySQL Databases",
+					},
+					{
+						id: 3,
+						li: "Unlimited Email",
+					},
+					{
+						id: 4,
+						li: "250Gb Monthly Transfer",
+					},
+					{
+						id: 5,
+						li: "24/7 Tech Support",
+					},
+					{
+						id: 6,
+						li: "Daily Backups",
+					},
+				],
+				btn: "Get Started",
+				btn_link: "/dashboard",
+			},
+			{
+				id: 3,
+				title: "Enterprise",
+				price: "$419",
+				duration: "/month",
+				list: [
+					{
+						id: 1,
+						li: "5GB Linux Web Space",
+					},
+					{
+						id: 2,
+						li: "5 MySQL Databases",
+					},
+					{
+						id: 3,
+						li: "Unlimited Email",
+					},
+					{
+						id: 4,
+						li: "250Gb Monthly Transfer",
+					},
+					{
+						id: 5,
+						li: "24/7 Tech Support",
+					},
+					{
+						id: 6,
+						li: "Daily Backups",
+					},
+				],
+				btn: "Get Started",
+				btn_link: "/dashboard",
+			},
+		],
+	},
+	transactions: {
+		heading: "Wallet summary",
+		table: {
+			thead: {
+				num: "Order No.",
+				name: "Owner Name",
+				price: "Amount",
+				date: "Date",
+				status: "Status",
+			},
+			tbody: {
+				td: [
+					{
+						id: 1,
+						num: "000012",
+						name: "John Wick",
+						price: "$10.00",
+						date: "Fri, 12 Nov 2021",
+						status: "Completed",
+					},
+					{
+						id: 2,
+						num: "000011",
+						name: "Brent Phillips",
+						price: "$30.00",
+						date: "Tue, 09 Nov 2021",
+						status: "Completed",
+					},
+					{
+						id: 3,
+						num: "000010",
+						name: "Monica Cajrval",
+						price: "$60.00",
+						date: "Wed, 03 Nov 2021",
+						status: "Completed",
+					},
+					{
+						id: 4,
+						num: "000009",
+						name: "Sasha Smith",
+						price: "$10.00",
+						date: "Wed, 27 Oct 2021",
+						status: "Completed",
+					},
+					{
+						id: 5,
+						num: "000008",
+						name: "Lara Benz",
+						price: "$65.00",
+						date: "Thu, 30 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 6,
+						num: "000007",
+						name: "Tom Hankle",
+						price: "$50.00",
+						date: "Thu, 23 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 7,
+						num: "000006",
+						name: "Samira Jones",
+						price: "$32.00",
+						date: "Thu, 23 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 8,
+						num: "000005",
+						name: "Jennifer Kem",
+						price: "$10.00",
+						date: "Thu, 23 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 9,
+						num: "000004",
+						name: "Lara Benz",
+						price: "$65.00",
+						date: "Thu, 30 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 10,
+						num: "000003",
+						name: "Tom Hankle",
+						price: "$50.00",
+						date: "Thu, 23 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 11,
+						num: "000002",
+						name: "Samira Jones",
+						price: "$32.00",
+						date: "Thu, 23 Sep 2021",
+						status: "Completed",
+					},
+					{
+						id: 12,
+						num: "000001",
+						name: "Jennifer Kem",
+						price: "$10.00",
+						date: "Thu, 23 Sep 2021",
+						status: "Completed",
+					},
+				],
+			},
 		},
 	},
 	error: {
