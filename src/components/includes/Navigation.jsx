@@ -29,6 +29,11 @@ function Navigation({ active, toggle, logged }) {
 								</NavLink>
 							</li>
 							<li>
+								<NavLink to="/jobs" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggle}>
+									Jobs
+								</NavLink>
+							</li>
+							<li>
 								<NavLink to="/solutions" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggle}>
 									Solutions
 								</NavLink>
@@ -64,6 +69,11 @@ function Navigation({ active, toggle, logged }) {
 								<li>
 									<NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggle}>
 										About
+									</NavLink>
+								</li>
+								<li>
+									<NavLink to="/jobs" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggle}>
+										Jobs
 									</NavLink>
 								</li>
 								<li>

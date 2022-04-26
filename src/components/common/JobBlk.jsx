@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const JobBlk = ({ src, alt, title, link, company, company_link, act_btn }) => {
+const JobBlk = ({ src, alt, title, para, link, date, experience, location, salary, company, company_link, act_btn }) => {
 	return (
 		<>
 			<div className="job_blk">
@@ -13,13 +13,28 @@ const JobBlk = ({ src, alt, title, link, company, company_link, act_btn }) => {
 						<h5>
 							<Link to={link}>{title}</Link>
 						</h5>
-						<div className="company">
+						<p>{para}</p>
+						<ul className="mini_lst">
+							<li>
+								<span>Post Data:</span> {date}
+							</li>
+							<li>
+								<span>Experience:</span> {experience}
+							</li>
+							<li>
+								<span>Location:</span> {location}
+							</li>
+							<li>
+								<span>Salary:</span> {salary}
+							</li>
+						</ul>
+						{/* <div className="company">
 							<Link to={company_link}>{company}</Link>
-						</div>
+						</div> */}
 					</div>
 					<div className="act_btn">
 						<Link to="?" className="site_btn sm">
-							{act_btn.edit}
+							{act_btn.view}
 						</Link>
 					</div>
 				</div>
