@@ -1568,7 +1568,7 @@ footer {
 			width: 6rem;
 			min-width: 6rem;
 			height: 6rem;
-			margin-right: 1rem;
+			margin-right: 2rem;
 			border-radius: 1rem;
 			overflow: hidden;
 		}
@@ -1774,6 +1774,10 @@ footer {
 					color: $dark_gray;
 					white-space: nowrap;
 					margin-left: auto;
+				}
+				input[type="radio"],
+				input[type="checkbox"] {
+					margin-top: 0.2rem;
 				}
 			}
 		}

@@ -8,6 +8,7 @@ import Footer from "./components/includes/Footer";
 import Home from "./components/pages/home/Index";
 import About from "./components/pages/about/Index";
 import Jobs from "./components/pages/jobs/Index";
+import Solutions from "./components/pages/solutions/Index";
 import Blog from "./components/pages/blog/Index";
 import BlogDetail from "./components/pages/blog_detail/Index";
 import Contact from "./components/pages/contact/Index";
@@ -69,6 +70,7 @@ function App() {
 						{/* <Route exact path="/services/service-detail" element={<ServiceDetail />} /> */}
 						<Route exact path="/blog" element={<Blog />} />
 						<Route exact path="/jobs" element={<Jobs />} />
+						<Route exact path="/solutions" element={<Solutions />} />
 						<Route exact path="/blog/blog-detail" element={<BlogDetail />} />
 						<Route exact path="/contact" element={<Contact />} />
 						<Route exact path="/faq" element={<Faq />} />

@@ -83,7 +83,7 @@ function Logon({ data }) {
 								</div>
 							</div>
 							<div className="btn_blk form_btn">
-								<button type="submit" className="site_btn block">
+								<button type="submit" className="site_btn round block">
 									{data.form.btn}
 								</button>
 							</div>

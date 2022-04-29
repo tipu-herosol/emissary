@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 function Logon({ data }) {
 	const [pass, setPass] = useState(false);
@@ -43,7 +42,7 @@ function Logon({ data }) {
 								</div>
 							</div>
 							<div className="btn_blk form_btn">
-								<button type="submit" className="site_btn block">
+								<button type="submit" className="site_btn round block">
 									{data.form.btn}
 								</button>
 							</div>

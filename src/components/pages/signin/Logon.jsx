@@ -19,7 +19,7 @@ function Logon({ data }) {
 		<>
 			<section id="logon">
 				<div className="contain sm">
-					<form action="" method="POST" onSubmit={inputHandle}>
+					<form action="/dashboard" method="POST" onSubmit={inputHandle}>
 						<div className="log_blk">
 							<div className="txt text-center">
 								<h3>{data.heading}</h3>
@@ -52,7 +52,7 @@ function Logon({ data }) {
 								</div>
 							</div>
 							<div className="btn_blk form_btn">
-								<button type="submit" className="site_btn block">
+								<button type="submit" className="site_btn round block">
 									{data.form.btn}
 								</button>
 							</div>

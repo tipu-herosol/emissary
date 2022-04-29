@@ -15,7 +15,7 @@ const JobList = ({ data }) => {
 						<div className="col-sm">
 							<div className="top_head">
 								<div className="txt">
-									<h2>{data.heading}</h2>
+									<h3>{data.heading}</h3>
 									<p>{data.show_result}</p>
 								</div>
 								<div className="btn_blk">
